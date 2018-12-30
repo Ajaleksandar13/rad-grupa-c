@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Charm');
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgba(204, 204, 204, 0.466);
+    margin: 0;
+}
+
+main{
+    *min-height: calc(100vh - 200px - 114px);
+    width: 70%;
+    margin: auto;
+    padding-top: 15vh;
+}
+
+.tabela, th, tr, td {
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    background-color: #fff;
+    font-family:'Charm', cursive;
+    text-align: center;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+th {
+    background-color: #CC3300;
+    font-family: 'Dancing Script', cursive;
+    *font-family:'Charm', cursive;
+    color: white;
+    padding: 1em;
+    font-size: 1.2em;
+    
+}
+
+.tabela {
+    box-shadow: 5px 5px;
+}
+
+caption {
+    font-family: 'Dancing Script', cursive;
+    *font-family:'Charm', cursive;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+td:hover {
+    background-color: lightgray;
+}
+
+
+
+
+
+@media (max-width: 1130px) {
+   main{
+       width: 85%;
+   }
+}
+
+@media (max-width: 900px) {
+   main{
+
+       width: 98%;
+   }
+}
+
+
+
+@media (max-width: 650px), (max-width: 650px) and (orientation: landscape), (max-width: 450px){
+   th {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+    td {
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 380px){
+   th {
+        padding: 0.3em;
+        font-size: 0.8em;
+    }
+    td {
+        font-weight: bold;
+        font-size: 0.74em;
+    }
+}

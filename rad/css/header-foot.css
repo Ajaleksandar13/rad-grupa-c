@@ -1,0 +1,423 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    min-height: 100vh ;
+    padding-top: 179px;
+    overflow-x: hidden;
+}
+
+main{
+    min-height: calc(100vh - 179px - 106px);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    background-color: #fff;
+    overflow: hidden;
+
+    z-index: 1000;
+}
+
+
+/**** flex roditelj ****/
+.header-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*** flex deca ****/
+.logo-wrap{
+    padding: 10px;
+    flex-basis: 164px;
+
+    animation: logo 5s linear 2s infinite alternate;  
+}
+
+header .h1-wrap{
+    flex: 1 495px;
+
+    /* zbog centriranja h1 **/
+    display: flex;
+    text-align: center;
+}
+
+.main-nav{
+    flex: 1 100%;
+    background-color: #663300;
+}
+/*** kraj flex deca ***/
+
+
+.logo-wrap img{
+    width: 100%;
+    height: 100px;
+}
+
+@keyframes logo {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+.h1-wrap h1 {
+    margin: auto;
+    font-size: 24pt;
+    font-weight: bold;
+    color: #663300;
+}
+
+
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 3px;
+
+    width: 585px;
+  }
+
+  
+header li {
+    margin-right: 3px;
+}
+  
+.main-nav li a {
+    display: block;
+    box-shadow: inset 0px 0px 300px 0px rgba(0, 0, 0, 0.281);
+    color: #CC3300;
+    text-align: center;
+    padding: 13px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14pt;
+    height: auto;
+    text-shadow: -1px -1px 1px  rgba(241, 92, 42, 0.986);
+
+    transition: all .5s ease;
+}
+
+.main-nav li a:hover {
+    color: white;
+    background-color: #CC3300; 
+} 
+
+
+.main-nav .active {
+    margin-right: auto;
+    box-shadow: -62px -1px 105px -25px rgba(0,0,0,0.5);
+    text-shadow: 4px 4px 9px rgba(7, 0, 16, 1);
+    pointer-events: none;
+
+    perspective: 11px;
+} 
+
+
+.main-nav .active > a {
+    color: white;
+    background-color: #CC3300; 
+    box-shadow: inset -200px 0px 300px -129px rgba(0,0,0,0.69);
+    text-shadow: -10px -3px 19px rgba(0, 0, 0, 1);
+    margin-bottom: 1px;
+
+    z-index: 10;
+
+    transform-style: preserve-3d;
+    transform: rotateY(1.9deg) scaleY(.79) translate(15px, -1px);
+}   /********** kraj headera ***********/
+
+
+
+/******* footer *********/
+
+  
+footer{
+    padding: 35px;
+    background-color: #663300;
+    color: white;
+    text-align: center;
+}
+
+footer .back-img{
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    transition: all .4s ease;
+}
+
+footer .back-img:hover{
+    background-color: rgba(204, 51, 0, 0.678);
+}
+
+.back-img img{
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+footer address{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: rgb(141, 141, 141);
+}
+/****** kraj futera *******/
+
+
+/*****************************
+       media
+*****************************/
+
+ @media (max-width: 750px) {
+     body{
+         padding-top: 132px;
+     }
+
+     main{
+        min-height: calc(100vh - 132px - 86px);
+    }
+
+    header .h1-wrap {
+        flex: 1 390px;
+    }
+
+    .h1-wrap h1 {
+        font-size: 17pt;
+    }
+
+    .logo-wrap {
+        padding: 5px;
+        flex-basis: 104px;
+        height: 90px;
+    }
+
+    .logo-wrap img {
+        height: 78px;
+    }
+
+    .main-nav ul {
+        padding: 2px;
+        width: 100%;
+    }
+
+    .main-nav li a {
+        padding: 10px 20px;
+        font-size: 11pt;
+    }
+
+    footer{
+        padding: 25px;
+    }
+}
+
+
+ @media (max-width: 510px) {
+
+    body{
+        padding-top: 105px;
+    }
+
+    main{
+        min-height: calc(100vh - 105px - 76px);
+    }
+
+    header .h1-wrap {
+        flex: 1 200px;
+    }
+
+    .h1-wrap h1 {
+        font-size: 15pt;
+    }
+
+    .logo-wrap {
+        padding: 3px;
+        flex-basis: 80px;
+        height: 72px;
+    }
+
+    .logo-wrap img {
+        height: 62px;
+    }
+
+    .main-nav ul {
+        padding: 1px;
+    }
+
+    header li {
+        margin-right: 1px;
+    }
+
+    .main-nav li a {
+        padding: 7px 18px;
+        font-size: 10pt;
+    }
+
+    .h1-nastavak{
+        display: none;
+    }
+
+
+    footer{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 510px) and (orientation: landscape), (max-width: 480px) {
+    body {
+      padding-top: 70px;
+    }
+
+    header {
+        position: static;
+        width: 100%;
+    }
+
+    .logo-wrap, .h1-wrap{
+        position: fixed;
+        z-index: 1001;
+    }
+
+    .h1-wrap{
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 70px;
+        padding-left: 80px;
+        background-color: #fff;
+        border-bottom: 3px solid #663300;
+    }
+
+    .logo-wrap{
+        top: 0;
+        left: 0;
+        
+        padding: 4px;
+        width: 80px;
+        height: 60px;
+        z-index: 1002;
+    }
+
+    .logo-wrap img {
+        height: 58px;
+    }
+
+
+    footer{
+        padding: 13px;
+    }
+   
+  }
+  
+  @media (orientation: portrait) and (max-width: 390px){
+
+    
+    main{
+        min-height: calc(100vh - 72px - 62px -63px);
+    }
+
+    .main-nav {
+        width: 100%;
+        background-color: #663300ab;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-nav li:not(.active) {
+        flex: 1 ;
+        background-color: #663300; 
+        order: 0;
+    }
+
+    .main-nav .active {
+        flex: 1 100%;
+        margin-right: -4px;
+        order: -1;
+    }
+
+    .main-nav .active > a {
+        width: 50%;
+        margin: auto;
+
+        transform: rotateY(1.1deg) scaleY(.79) translate(15px, -1px);
+    }
+  }
+
+
+
+
+
+
+/********* clear fix ********/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+/* <!-- filipov kod za header sa index.html --> */
+    /* 
+    
+    <header id="header">
+        <img class="logo" src="../img/logo.png" alt="logo">
+
+        <div class="center" > 
+            <h1 class="naslov"> Pavle Pavlović <br> Restoran Prste da poližeš i ostale delatnosti</h1>
+        </div>
+    
+
+    <nav >
+        <ul>
+            <li class="pn"> <a href="../index.html">HOME</a></li>
+            <li class="pn"> <a href="#" target="_blank" class="active">Meni</a></li>
+            <li class="pn"> <a href="#" target="_blank">O Vlasniku</a></li>
+            <li class="pn"> <a href="#" target="_blank">Radno vreme</a></li>
+        </ul>
+    </nav>
+</header> 
+
+*/
+/* <!-- kraj headera --> */
+
+
+/******** futer ********/
+/*
+
+<footer>
+<address>
+    <p>Ulica gladnih 13, Beograd <br>
+    Telefon: 011/555-333 </p> 
+</address>
+
+<div class="back-img">
+    <a href="#">
+        <img class="top" src="../img/top.png" alt="up" height="50" width="50" >
+    </a>
+</div>
+</footer>
+
+*/
+/***** kraj futera ******/

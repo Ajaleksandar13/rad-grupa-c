@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box; 
+}
+
+html{
+    padding: 0%;
+    margin: 0%;
+    *overflow: hidden;
+}
+
+body{
+    background-color: rgb(204, 204, 204);
+    margin: 0%;
+}
+
+
+.main-wrap{
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+/*******************************************
+                tabela 
+********************************************/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    *background-color: rgb(253, 252, 252);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+    *border: 1px solid red;
+    box-shadow: 17px 17px 30px -5px rgba(0,0,0,0.75);
+}
+
+/******** naslov ******/
+caption{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-size: 35px;
+    color: #663300e8;
+    text-shadow: 6px 4px 28px rgba(0, 0, 0, 1);
+}
+
+/******* prvi red *******/
+thead th {
+    background-color: #663300cb;
+    color: rgb(209, 126, 98);
+    font-size: 1.2em;
+    *width: 15%;
+    padding: .9em 1em;
+    text-shadow: 4px -3px 12px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 26px 0px rgba(0,0,0,0.75);
+}
+
+thead th:nth-child(even) {
+    background-color: #663300f6;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:hover:not(.not) {
+    background-color: rgb(255, 255, 255);
+}
+
+/****** prva kolona ********/
+th[rowspan]{
+    background-color: #663300ad;
+    font-size: 1.5em;
+    color: rgb(209, 126, 98);
+    text-shadow: 4px -3px 12px rgba(0, 0, 0, 1);
+    box-shadow: 2px 0px 22px 4px rgba(0,0,0,0.75);
+}
+
+/******* border između redova *******/
+tr.dorucak, tr.rucak, tr.vecera {
+    border-top: 1px solid #000;
+}
+
+
+/****** druga kolona (jela) ******/
+th{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1em;
+    background-color: #6633002c;
+    padding: 1em;
+    font-style: normal;
+    box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.75);
+}
+
+
+/* poslednja kolona */
+td:last-child{
+    background-color: #6633002c;
+    font-weight: bold;
+    font-style: normal;
+    box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.75);
+}
+
+/*** futer tabele *****/
+tfoot td[colspan]{
+    background-color: #663300cb;
+    color: rgb(209, 126, 98);
+    padding: 11px 2px;
+    font-size: 0.9em;
+    font-style: italic;
+    text-shadow: 4px -3px 12px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px 0px 1px 0px rgba(0,0,0,0.75);
+}
+
+/**** moj logo na tabeli ****/
+.aj-logo{
+    position: relative;
+    width: 1px;
+    height: 1px;
+    font-size: 100px;
+    color: transparent;
+    text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.473);
+
+    opacity: 0;
+    animation: aj-logo 20s ease 5s infinite;
+}
+
+.slovo-a{
+    position: absolute;
+    top: 8px;
+    left: 50px;
+}
+
+.slovo-j{
+    position: absolute;
+    top: 52px;
+    left: 66px;
+}
+
+
+
+table tr td:empty, #empty{
+    background-color: rgba(109, 109, 109, 0.63);
+}
+
+
+tr > td:nth-of-type(even) {
+    background-color: rgba(128, 128, 128, 0.219);
+}
+/**** kraj tabele ****/
+
+
+
+
+
+/**********************************
+   media querie
+**********************************/
+
+@media (max-width: 1500px) {
+    .main-wrap{
+        width: 95%;
+        *background-color: #fff;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 1135px) {
+    .main-wrap {
+        width: 100%;
+        *background-color: rgb(4, 219, 226);
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    th[rowspan]{
+        font-size: 1.5em;
+    }
+
+    th{
+        font-size: 1em;
+        padding: 0.7em;
+    }
+
+    td{
+        padding: 0.4em;
+    }
+
+    td .nula{
+        display: none;
+    }
+
+    .aj-logo{
+        position: relative;
+        *color: #000;
+        width: 1px;
+        height: 1px;
+        font-size: 69px;
+    }
+
+    .slovo-j{
+        position: absolute;
+        top: 34px;
+    }
+}
+
+
+@media (max-width: 941px) {
+.main-wrap {
+    *background-color: rgb(4, 8, 226);
+    padding: 0.3em;
+    font-size: 0.8em;
+    }
+
+
+    thead th {
+        padding: .9em .5em;
+    }
+
+    th[rowspan]{
+        font-size: 1.3em;
+    }
+
+    th{
+        font-size: 0.9em;
+        padding: 0.6em;
+    }
+
+    td{
+        padding: 0.3em;
+    }
+
+    td span{
+        display: none;
+    }
+}
+
+
+@media (max-width: 650px), (max-width: 650px) and (orientation: landscape), (max-width: 450px){
+.main-wrap {
+    *background-color: rgb(85, 226, 4);
+    padding: 0.2em;
+    font-size: 0.7em;
+}
+
+th[rowspan]{
+    font-size: 1.2em;
+}
+
+th{
+    font-size: 0.9em;
+    padding: 0.4em 0.3em;
+}
+
+td{
+    padding: 0.2em;
+}
+}
+
+
+@media (max-width: 390px){
+    .main-wrap {
+        *background-color: rgb(226, 4, 4);
+        padding: 0.2em;
+        font-size: 0.6em;
+    }
+    
+    caption {
+        font-size: 23px;
+    }
+
+    thead th {
+        padding: .8em .17em;
+    }
+    
+    th[rowspan]{
+        font-size: 1em;
+    }
+    
+    th{
+        padding: 0.13em;
+    }
+    
+    td{
+        padding: 0.1em;
+    }
+}
+
+
+
+/***********************************
+       keyframes
+***********************************/
+
+@keyframes aj-logo {
+    0% {
+        opacity: 0;
+    }
+    3% {
+        opacity: 0.05;
+    }
+    49% {
+        opacity: 0.14;
+    }
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0.14;
+    }
+    99% {
+        opacity: 0.05;
+    }
+    100% {
+        opacity: 0.01;
+    }
+}

@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgba(204, 204, 204, 0.466);
+}
+
+h2, h3{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    padding: 1em 0;
+    color: #663300;
+}
+
+section h2{
+    font-size: 32px;
+}
+
+section p, .nagrade{
+    padding: 0 2em;
+}
+
+h3{
+    font-size: 27px;
+}
+
+hr {
+    height: 2px;
+    color: #5c5d5e;
+    background-color: #5c5d5e;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.main-wrap{
+    width: 70%;
+    margin: auto;
+}
+
+.nav-img-wrap{
+    margin-bottom: 40px;
+}
+
+.nav-wrap{
+    float: left;
+    width: 49%;
+    list-style-position: inside;
+    padding: 4em 0 2em 2em;
+    font-size: 20px;
+}
+
+
+
+.nav-wrap li a{
+    display: inline-block;
+    padding: 0.5em 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: #CC3300;
+}
+
+.nav-wrap li a:hover{
+    background-color: #fff;
+    text-decoration: underline overline;
+    color: #CC3300;
+}
+
+.img-wrap{
+    float: right;
+    width: 49%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border: 2px solid rgb(85, 84, 84);
+    border-radius: 5px;
+}
+.img-wrap img{
+    width: 100%;
+    height: auto;
+}
+
+section div{
+    margin-bottom: 100px;
+}
+
+section h4{
+    margin-bottom: 1em;
+}
+
+section ul{
+    margin-left: 2em;
+}
+
+
+/****************************
+     media
+*******************************/
+@media (max-width: 1070px){
+    .main-wrap {
+        width: 90%;
+    }
+}
+
+
+
+@media (max-width: 780px){
+    .main-wrap {
+        width: 100%;
+        padding: 0 0.5em;
+    }
+
+    .nav-wrap {
+        padding: 1.5em  0 1.2em 2.2em;
+        font-size: 18px;
+    }
+}
+
+
+
+@media (max-width: 650px), (max-width: 650px) and (orientation: landscape), (max-width: 450px){
+
+    .main-wrap {
+        padding: 0 0.3em;
+    }
+
+    .img-wrap,
+    .nav-wrap {
+        float: none;
+        display: block;
+        width: 80%;
+    }
+
+    .nav-wrap {
+        float: none;
+        padding: 2em 0 1.2em 2em;
+        font-size: 16px;
+        margin: auto;
+    }
+
+    
+    .img-wrap{
+        margin: 30px auto 0;
+        padding: 4px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    section p, .nagrade {
+        padding: 0 .3em;
+    }
+}
+
+
+@media (max-width: 380px){
+
+    .nav-wrap {
+        padding: 1.5em 1.2em 0;
+    }
+
+    section p, .nagrade {
+        padding: 0 0.3em;
+    }
+
+    .img-wrap, .nav-wrap {
+        float: none;
+        width: 100%;
+    }
+}
+
+/********* clear fix ********/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
